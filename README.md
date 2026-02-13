@@ -20,6 +20,8 @@ Live on : https://blog-agent-latest-mkir.onrender.com
 
 ## 🧠 Architecture Overview
 
+![Project Architecture](architecture.png)
+
 - Router → Determines blog generation mode
 
 - Research Node → Collects evidence (if needed)
@@ -74,6 +76,7 @@ uv run streamlit run streamlit_app.py
  OPENAI_API_KEY=your_key_here
 TAVILY_API_KEY=your_key_here
 ```
+
 
 
 
