@@ -1,0 +1,1 @@
+Sorry, failed to generate the blog.
