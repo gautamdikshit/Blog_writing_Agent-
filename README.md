@@ -4,7 +4,7 @@ An AI-powered technical blog generator built using **LangGraph**, **LLMs**, and 
 The system can optionally perform research before generating structured, actionable technical blog posts.
 
 Live on : https://blog-agent-latest-mkir.onrender.com
-(DISCLAIMER: Here I am using Render Free Web Service, so this can take 20–60 seconds or maybe even more. The reason is, the application goes to sleep after ~15 minutes of inactivity, the Container shuts down completely and restarts when someone visits the URL. What happens is: Render wakes up the container --> Pulls the image --> Starts the server --> Loads dependencies.)
+(DISCLAIMER: Here I am using Render Free Web Service, so this can take 20–60 seconds or maybe even more. The reason is, the application goes to sleep after ~15 minutes of inactivity, the Container shuts down completely and restarts when someone visits the URL. What happens is: Render wakes up the container --> Pulls the image --> Starts the server --> Loads dependencies. Using the free tier, so lets just accept it.)
 
 🔄 Restarts when someone visits the URL
 ---
@@ -33,16 +33,20 @@ Live on : https://blog-agent-latest-mkir.onrender.com
 
 ## 🏗 Project Structure
 
+```
+blog-writing-agent/
 │
-├── agent.py # LangGraph-based blog agent
-├── streamlit_app.py # Streamlit UI
-├── main.py # API endpoint using FastAPI
-├── pyproject.toml # Project configuration (uv)
-├── uv.lock # Locked dependencies
+├── agent.py              # LangGraph-based blog agent
+├── streamlit_app.py      # Streamlit UI
+├── main.py               # FastAPI API endpoint
+├── pyproject.toml        # Project configuration (uv)
+├── uv.lock               # Locked dependencies
 ├── Dockerfile
 ├── .dockerignore
 ├── .gitignore
-└── blogs/ # Generated blog storage
+│
+└── blogs/                # Generated blog storage
+```
 
 ---
 
@@ -69,4 +73,5 @@ uv run streamlit run streamlit_app.py
  OPENAI_API_KEY=your_key_here
 TAVILY_API_KEY=your_key_here
 ```
+
 
