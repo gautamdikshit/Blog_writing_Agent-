@@ -4,6 +4,9 @@ An AI-powered technical blog generator built using **LangGraph**, **LLMs**, and 
 The system can optionally perform research before generating structured, actionable technical blog posts.
 
 Live on : https://blog-agent-latest-mkir.onrender.com
+(DISCLAIMER: Here I am using Render Free Web Service, so this can take 20–60 seconds or maybe even more. The reason is, the application goes to sleep after ~15 minutes of inactivity, the Container shuts down completely and restarts when someone visits the URL. What happens is: Render wakes up the container --> Pulls the image --> Starts the server --> Loads dependencies.)
+
+🔄 Restarts when someone visits the URL
 ---
 
 ## 🚀 Features
@@ -66,3 +69,4 @@ uv run streamlit run streamlit_app.py
  OPENAI_API_KEY=your_key_here
 TAVILY_API_KEY=your_key_here
 ```
+
